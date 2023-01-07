@@ -5,7 +5,7 @@ import mapMarker from "../assests/map_marker_icon.png";
 import EventPopUp from "../components/EventPopUp";
 import eventPhoto1 from "../assests/event_photo1.jpg"
 import eventPhoto2 from "../assests/event_photo2.jpg"
-import mapboxgl from "mapbox-gl"
+import mapboxgl from "!mapbox-gl"
 //add asked location's marker -> add popUp screens for the event Information
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 const MapPage = () => { 
