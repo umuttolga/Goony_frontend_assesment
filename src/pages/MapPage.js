@@ -6,8 +6,10 @@ import EventPopUp from "../components/EventPopUp";
 import eventPhoto1 from "../assests/event_photo1.jpg"
 import eventPhoto2 from "../assests/event_photo2.jpg"
 import mapboxgl from "!mapbox-gl"
-//add asked location's marker -> add popUp screens for the event Information
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+
 const MapPage = () => { 
   const [showEventInfo1, setShowEventInfo1] = useState(false);
   const [showEventInfo2, setShowEventInfo2] = useState(false);
