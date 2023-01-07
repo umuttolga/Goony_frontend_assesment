@@ -7,7 +7,7 @@ import eventPhoto1 from "../assests/event_photo1.jpg"
 import eventPhoto2 from "../assests/event_photo2.jpg"
 
 //add asked location's marker -> add popUp screens for the event Information
-
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 const MapPage = () => { 
   const [showEventInfo1, setShowEventInfo1] = useState(false);
   const [showEventInfo2, setShowEventInfo2] = useState(false);
