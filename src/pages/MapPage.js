@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Footer from "../layout/Footer";
-import Map, { Marker } from "!react-map-gl";
+import Map, { Marker } from "react-map-gl";
 import mapMarker from "../assests/map_marker_icon.png";
 import EventPopUp from "../components/EventPopUp";
 import eventPhoto1 from "../assests/event_photo1.jpg"
