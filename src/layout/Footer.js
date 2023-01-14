@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Footer = (props) => {
   return (
-    <footer className={`${props.className} absolute inset-x-0 bottom-0 w-fill border-t-2 border-black p-4`}>
+    <footer className={`${props.className} absolute inset-x-0 bottom-0 w-full border-t-2 border-black p-4`}>
     <ul className="flex justify-between">
       <li>
         <Link to="/">

@@ -6,6 +6,7 @@ import EventPopUp from "../components/EventPopUp";
 import eventPhoto1 from "../assests/event_photo1.jpg"
 import eventPhoto2 from "../assests/event_photo2.jpg"
 import mapboxgl from "mapbox-gl";
+import Card from "../layout/Card";
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
@@ -25,8 +26,8 @@ const MapPage = () => {
     setShowEventInfo2(false);
   };
   return (
-    <div className="flex flex-col bg-slate-500 justify-center w-screen h-screen  ">
-      <div className=" relative m-auto w-[390px] h-[844px] inset-0">
+    <div className="flex flex-col bg-slate-500 justify-center sm:w-screen sm:h-screen max-sm:h-screen max-sm:w-screen w-[390px] h-[844px] ">
+      <div className=" relative m-auto sm:w-screen sm:h-screen max-sm:h-screen max-sm:w-screen w-[390px] h-[844px] inset-0">
         {showEventInfo1 && (
           <EventPopUp
           eventStatusColor="text-red-300"
@@ -59,14 +60,17 @@ const MapPage = () => {
             eventActionColor="bg-green-600"
           />
         )}
+        <div className="max-sm:h-screen max-sm:w-screen sm:w-screen sm:h-screen md:max-w-[390px] m-auto max-sm:m-auto md:max-h-[844px]">
+
         <Map
-          mapboxAccessToken="pk.eyJ1IjoibXJob3BlbGEiLCJhIjoiY2xjbDg2eTdvMDZudTNvbm03bmNtbW94ayJ9.5BOLpEOlPNKoDiy2XF0Ekg"
+          mapboxAccessToken={process.env.REACT_APP_MY_API}
           initialViewState={{
             longitude: -118.441002,
             latitude: 34.05318,
             zoom: 14,
           }}
-          style={{ width: 390, height: 840 }}
+          
+          style={{ maxHeight: 1000, maxWidth: 390}}
           mapStyle="mapbox://styles/mapbox/streets-v9"
         >
           <Marker
@@ -92,8 +96,9 @@ const MapPage = () => {
             <img className="w-16 h-16" src={mapMarker} alt="marker" />
           </Marker>
         </Map>
-
         <Footer className="bg-white z-10" />
+        </div>
+
       </div>
     </div>
   );

@@ -88,7 +88,7 @@ const SignUpPage = (props) => {
             <input
               {...register("userAge", { required: true })}
               type="date"
-              className="p-1 text-center focus:outline-none placeholder:text-center py-1 w-full rounded-md"
+              className="p-1 text-center focus:outline-none placeholder:text-center py-1 w-full md:w-10px rounded-md"
               placeholder="Age"
             />
           </div>
@@ -129,7 +129,7 @@ const SignUpPage = (props) => {
             </span>
           </div>
           <div className="">
-            <div className="text-sm text-white flex justify-around ">
+            <div className="text-sm text-white flex justify-evenly md:justify-around ">
               <input
                 {...register("accepTerms")}
                 className="w-4 "
