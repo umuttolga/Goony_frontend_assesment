@@ -20,7 +20,7 @@ const LoginPage = () => {
   return (
     <Card bgColor="bg-green-600">
       <div className="mt-[15%]">
-        <h2 className="text-5xl font-bold tracking-widest">Goony</h2>
+        <h2 className="text-5xl font-bold tracking-widest">Lorem Ipsum</h2>
       </div>
       <div className="flex justify-center">
         <img src={goonyLogo} alt="Goony Logo" />
