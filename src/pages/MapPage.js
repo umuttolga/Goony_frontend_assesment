@@ -6,7 +6,6 @@ import EventPopUp from "../components/EventPopUp";
 import eventPhoto1 from "../assests/event_photo1.jpg"
 import eventPhoto2 from "../assests/event_photo2.jpg"
 import mapboxgl from "mapbox-gl";
-import Card from "../layout/Card";
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
